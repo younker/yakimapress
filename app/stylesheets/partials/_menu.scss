@@ -1,0 +1,62 @@
+@import "compass/css3";
+@import "compass/css3/inline-block";
+
+#menu_bar {
+    background-color : #e7e3d4;
+    @include opacity(0.6);
+    color : $green;
+    position : absolute;
+    top : 113px;
+    left : 0px;
+    height : 63px;
+    border-bottom : solid 1px #476443;
+    width : 100%;
+}
+
+ul#menuC {
+    list-style-type : none;
+    margin : 0 0 0 5px;
+    padding : 0;
+    position : absolute;
+    top : 121px;
+    color : #002c03;
+
+    li {
+        display : inline;
+        float : left;
+        width : 119px;
+        text-transform : uppercase;
+        letter-spacing : .1em;
+
+        a {
+            color : #002c03;
+            text-decoration : none;
+        }
+        a:hover {
+            text-decoration : underline;
+        }
+
+
+        div.title {
+            height : 2.2em;
+            span.cap { font-size : 2.1em; text-transform : uppercase; }
+            span.lc { font-size : 1.4em; text-transform : uppercase; }
+        }
+        div.descr {
+            font-size : .7em;
+            height : 2.2em;
+            padding : 0;
+            margin : 0 1px 0 0;
+            text-shadow : 1px 1px #999;
+            @include inline-block();
+
+            span.cap { font-size : 1.5em; text-transform : uppercase; }
+            span.lc { font-size : 1.2em; text-transform : uppercase; }
+        }
+
+    }
+    li.spacer { width : 240px; }
+    li.last   { width : 110px; }
+}    
+
+

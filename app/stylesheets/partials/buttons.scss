@@ -1,0 +1,59 @@
+@import "partials/helpers";
+@import "compass/css3/border-radius";
+
+$inactive_bg     : #dadada;
+$inactive_border : #555;
+$inactive_color  : #123;
+$inactive_shadow  : #fff;
+
+$hover_bg        : #dadada;
+$hover_color     : #000;
+
+$alert_bg : #fff;
+
+.button {
+    border       : 1px solid $inactive_border;
+    color        : $inactive_color !important;
+    display      : block;
+    float        : left;
+    font-size    : 11px;
+    font-weight  : bold;
+    padding      : 3px 10px 2px 10px;
+    text-align   : center;
+    margin-top   : 0px;
+    line-height  : 14px;
+    text-decoration : none;
+    text-shadow : 0 1px #ffffff;
+    white-space : nowrap;
+    @include border-radius(4px);
+    text-shadow : 1px 1px $inactive_shadow;
+
+    /*background : url("/img/sprites/vertical_backgrounds.png") repeat-x scroll 0 -173px transparent;*/
+    background : $inactive_bg;
+}
+.button { cursor : pointer; }
+
+.button img { margin-top : -1px; }
+html* input.button { line-height : 12px; margin-top : -4px; }
+
+.button:hover, .button.sel {
+    color : $hover_color !important;
+}
+
+.button:active {
+    /*background-position : 0px -59px;*/
+    background-color : $hover_bg;
+}
+
+.button.b100 { width : 100px; }
+.button.b150 { width : 150px; }
+.button.b200 { width : 200px; }
+.button.b250 { width : 250px; }
+
+.button.alert:hover {
+    color : $alert !important;
+    border-color : $alert;
+    background-color : $alert_bg;
+    text-shadow : none;
+
+}

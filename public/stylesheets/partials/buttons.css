@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------  easy element modificaction through simple class assignment ------------------------------------------------------------------------ */
+.marginT { margin-top: 10px; }
+
+.marginR { margin-right: 10px; }
+
+.marginB { margin-bottom: 10px; }
+
+.marginL { margin-left: 10px; }
+
+.hidden { display: none; }
+
+hr { margin: 1.5em 0; }
+
+.button { border: 1px solid #555555; color: #112233 !important; display: block; float: left; font-size: 11px; font-weight: bold; padding: 3px 10px 2px 10px; text-align: center; margin-top: 0px; line-height: 14px; text-decoration: none; text-shadow: 0 1px #ffffff; white-space: nowrap; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px; text-shadow: 1px 1px white; /*background : url("/img/sprites/vertical_backgrounds.png") repeat-x scroll 0 -173px transparent;*/ background: #dadada; }
+
+.button { cursor: pointer; }
+
+.button img { margin-top: -1px; }
+
+html* input.button { line-height: 12px; margin-top: -4px; }
+
+.button:hover, .button.sel { color: black !important; }
+
+.button:active { /*background-position : 0px -59px;*/ background-color: #dadada; }
+
+.button.b100 { width: 100px; }
+
+.button.b150 { width: 150px; }
+
+.button.b200 { width: 200px; }
+
+.button.b250 { width: 250px; }
+
+.button.alert:hover { color: #410000 !important; border-color: #410000; background-color: white; text-shadow: none; }

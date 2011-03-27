@@ -1,0 +1,138 @@
+@import "partials/helpers";
+@import "compass/layout";
+
+@import "compass/css3";
+@import "compass/css3/opacity";
+@import "compass/css3/inline-block";
+
+@include font-face("HoeflerTextBlack", font-files("hoefler_text-webfont.svg", svg, "hoefler_text-webfont.woff", woff, "hoefler_text-webfont.ttf", truetype));
+
+@include sticky-footer(80px);
+
+body {
+    background : url(/images/frame/body_bg.png) repeat-x 0px 100px $bg_cream;
+    font-family : Times, "Times New Roman", Georgia, serif !important;
+}
+#header_delimeter {
+    background-color : $green;
+    height : 8px;
+    width : 100%;
+    position : absolute;
+    top : 105px;
+    left : 0px;
+}
+#header_delimeter_fade {
+    background : url(/images/frame/fade_up.png) repeat-x 0 0px transparent;
+    height : 13px;
+    width : 100%;
+    position : absolute;
+    top : 92px;
+    left : 0px;
+}
+#header_bg {
+    background: url(/images/frame/header_bg.jpg) repeat-x scroll 0 0 $bg_cream;
+    height: 100px;
+    position: absolute;
+    top: 5px;
+    left : 0px;
+    width: 100%;
+    z-index: -1;
+}
+#header {
+    height : 177px;
+    position : relative;
+
+    #header_fruit {
+        background: url(/images/frame/header_fruit.png) no-repeat scroll 0 0 transparent;
+        height: 104px;
+        left: 199px;
+        position: absolute;
+        top: 7px;
+        width: 578px;
+        z-index: -1;
+        @include opacity(0.7);
+    }
+
+    #banner_logo {
+        background : url(/images/frame/yakima_press_company_logo.png) no-repeat 0 0px transparent;
+        position : absolute;
+        left : 350px;
+        top : 5px;
+        height : 314px;
+        width : 251px;
+    }
+}
+div#main_container { min-height : 140px; margin-bottom : 100px; /* to offset -80px margin on footer */ }
+div#footer {
+    background-color : $green;
+    color : $white;
+    letter-spacing : .05em;
+    font-size : .9em;
+    line-height : 1.4em;
+
+    #footer_delimeter_fade {
+        background : url(/images/frame/fade_up.png) repeat-x 0 0px transparent;
+        height : 13px;
+        width : 100%;
+        position : relative;
+        top : -13px;
+        left : 0px;
+        margin-bottom : 12px;
+    }
+
+    div.delimeter {
+        @include inline-block();
+        color : #7FB86B;
+        border-right : solid 1px $white;
+        margin : 0 5px 0 0;
+        padding : 0 0 0 5px;
+    }
+
+    span.cap { font-size : 1.3em; text-transform : uppercase; }
+    span.lc { font-size : .9em; text-transform : uppercase; }
+
+    a { color : $white; text-decoration : none; }
+    a:hover { text-decoration : underline; }
+}
+
+
+div#swirly_twirlyC {
+    $stH : 220;
+    $stW : 426;
+
+    position : relative;
+    height : 165px;
+    margin-bottom : 10px;
+
+    div#swirly_twirlyL, div#swirly_twirlyR {
+        position : absolute;
+        top : -64px;
+        left : 0px;
+        z-index : -1;
+        @include opacity(0.3);
+    }
+
+    div#swirly_twirlyL { @include sprite('swirly-twirly', 0, 0, $stH, $stW); }
+    div#swirly_twirlyR {@include sprite('swirly-twirly', -428, 0, $stH, $stW);
+        left : 524px;
+    }
+}
+
+h1 {
+/*  font-family : "HoeflerTextBlack";*/
+    font-weight : normal;
+    font-size : 2.8em;        
+    color : $alert;
+    text-shadow : 1px 1px #fff;
+}
+h1#page_title {
+    font-style : italic;
+    text-align : center;
+    margin-bottom : 1em;
+}
+
+
+
+
+
+

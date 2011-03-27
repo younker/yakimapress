@@ -1,0 +1,8 @@
+
+- if @product.photos?
+  - @product.photos.each do |photo|
+    %div.span-6{:style => 'text-align:center'}
+      = image_tag photo.photo.url(:thumb)
+      %br
+
+      = link_to 'Delete', product_photo_path(@product.id, photo.id), :class => 'button alert', :confirm => 'Are you sure you want to delete this photo?', :method => :delete

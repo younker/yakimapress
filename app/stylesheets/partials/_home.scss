@@ -1,0 +1,44 @@
+@import "partials/helpers";
+@import "compass/css3";
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+
+#productsC {
+    font-size : 1.2em;
+
+    h1 {
+        color : $green;
+        font-size : 2.65em;
+        text-align : left;
+        font-style : normal;
+        margin : 10px 0;
+    }
+    p {
+        font-family : arial, helvetica, sans-serif;
+        color : #000;
+    }
+
+    .flaged {
+        font-size : .95em;
+        $w : 1.6em;
+        border: $w solid $green;
+        border-left: $w solid transparent;
+        height: 0px;
+        color : $white;
+        text-align : right;
+        padding : 0 .25em 0 0;
+        
+        $r : 4px;
+        @include border-top-right-radius($r);
+        @include border-bottom-right-radius($r);
+
+        a { color : $white; text-decoration : underline; }
+        a:hover { text-decoration : none; }
+
+        span {
+            position : relative;
+            top : -.65em;
+        }
+    }
+
+}

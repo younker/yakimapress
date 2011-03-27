@@ -1,0 +1,41 @@
+.formC_700 { width : 700px; }
+
+.field {
+    margin-bottom : 10px;
+
+    label {
+        display : block;
+    }
+
+    label[data-type="checkbox"] {
+        display : inline;
+        margin-left : 5px;
+    }
+
+    textarea {
+        height : 20em;
+        width : 80%;
+        margin : 0;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="password"] {
+        padding : 4px;
+        border  : 1px solid #999;
+        color   : #333;
+        width   : 97%;
+        margin : 0;
+    }
+}
+.actions {
+    margin : 1.5em 0;
+}
+div.disabled_form_field {
+    padding : 4px;
+    border  : 1px solid #999;
+    color   : #333;
+    width   : 97%;
+    background-color : #dadada;
+    margin-bottom : 5px;
+}

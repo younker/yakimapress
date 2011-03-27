@@ -1,0 +1,8 @@
+%ul#menuC
+  - menu_items.each do |item|
+    - if item[:spacer].present?
+      %li.spacer &nbsp;
+    - else
+      %li{:class => item[:klass].present? ? item[:klass] : nil}
+        %div.title= link_to_unless current_page?(item[:url]), cap(item[:name]), item[:url]
+        %div.descr= cap(item[:descr].split(' '))

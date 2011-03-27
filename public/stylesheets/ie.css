@@ -1,0 +1,48 @@
+body { text-align: center; }
+* html body legend { margin: 0px -8px 16px 0; padding: 0; }
+html > body p code { *white-space: normal; }
+
+.container { text-align: left; }
+
+sup { vertical-align: text-top; }
+
+sub { vertical-align: text-bottom; }
+
+hr { margin: -8px auto 11px; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+fieldset { padding-top: 0; }
+
+legend { margin-top: -0.2em; margin-bottom: 1em; margin-left: -0.5em; }
+
+fieldset, #IE8#HACK { padding-top: 1.4em; }
+
+legend, #IE8#HACK { margin-top: 0; margin-bottom: 0; }
+
+textarea { overflow: auto; }
+
+label { position: relative; top: -0.25em; }
+
+input.text { margin: 0.5em 0; background-color: white; border: 1px solid #bbbbbb; }
+input.text:focus { border: 1px solid #666666; }
+input.title { margin: 0.5em 0; background-color: white; border: 1px solid #bbbbbb; }
+input.title:focus { border: 1px solid #666666; }
+input.checkbox { position: relative; top: 0.25em; }
+input.radio { position: relative; top: 0.25em; }
+input.button { position: relative; top: 0.25em; }
+
+textarea { margin: 0.5em 0; }
+
+select { margin: 0.5em 0; }
+
+button { position: relative; top: 0.25em; }
+
+/* IE's support of transparent images is abysmal */
+#header_fruit { background: none !important; }
+
+div#swirly_twirlyC html* div#swirly_twirlyL, div#swirly_twirlyC div#swirly_twirlyR { display: none; }
+div#swirly_twirlyC #swirly_twirlyL, div#swirly_twirlyC #swirly_twirlyR { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)" !important; opacity: 0.1 !important; }
+
+ul#menuC li { font-size: 13px; color: #123; }
+ul#menuC li div.subtitle { font-size: 10px; color: #123; margin-right: 4px; }

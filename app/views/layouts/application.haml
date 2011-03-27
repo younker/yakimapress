@@ -1,0 +1,63 @@
+:ruby
+  # 64 Grids @ 10px each with 5px padding
+!!!
+%html
+  %head
+    %title= content_for?(:header_title) ? yield(:header_title) : "Homemade Wine & Cider Presses | Yakima Press Co."
+
+    -# %link{:rel => 'icon', :type => 'image/png', :href => '/images/favicon.png'}
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{'name' => 'keywords',    :content => yield(:keywords) }/
+    %meta{'name' => 'description', :content => yield(:description) }/
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}/
+
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    = stylesheet_link_tag :defaults
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+
+    :javascript
+      var AUTH_TOKEN = encodeURIComponent(#{form_authenticity_token.inspect});
+
+%body
+  %div#root
+    %div#header_bg &nbsp;
+    %div#header_delimeter_fade &nbsp;
+    %div#header_delimeter &nbsp;
+    %div#menu_bar
+
+    %div.container
+      %div#header.span-48.last
+        %div#header_fruit &nbsp;
+        %div#banner_logo &nbsp;
+
+        = render :partial => 'layouts/application/menu'
+    
+      %div#main_container.span-48.last
+        %div#swirly_twirlyC
+          %div#swirly_twirlyL &nbsp;
+          %div#swirly_twirlyR &nbsp;
+
+        - if content_for?(:page_title)
+          %div.prepend-6.span-36.append-6.last= yield(:page_title)
+
+        - flash.each do |key, msg|
+          = render :partial => 'shared/user_notice', :locals => {:klass => key, :msg => msg}
+
+        = yield
+        
+  %div#footer
+    %div#footer_delimeter_fade &nbsp;
+    %div.container
+      %div.span-48.last
+        %div.span-14= render :partial => 'layouts/application/legal_stuff'
+        %div.span-20 &nbsp;
+        %div.span-14.last= render :partial => 'layouts/application/social_links'
+
+        -# render :partial => 'signin'
+
+

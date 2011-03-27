@@ -1,0 +1,28 @@
+@import "blueprint";
+
+// Generate the blueprint IE-specific customizations:
+@include blueprint-ie;
+
+
+/* IE's support of transparent images is abysmal */
+#header_fruit { background: none !important; }
+
+div#swirly_twirlyC {
+    html* div#swirly_twirlyL, div#swirly_twirlyR { display : none; }
+
+    #swirly_twirlyL, #swirly_twirlyR {
+        -ms-filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)" !important;
+        opacity: 0.1 !important;
+    }
+}
+
+ul#menuC li {
+    font-size: 13px;
+    color : #123;
+
+    div.subtitle {
+        font-size : 10px;
+        color : #123;
+        margin-right : 4px;
+    }
+}

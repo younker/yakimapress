@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------  easy element modificaction through simple class assignment ------------------------------------------------------------------------ */
+.marginT { margin-top: 10px; }
+
+.marginR { margin-right: 10px; }
+
+.marginB { margin-bottom: 10px; }
+
+.marginL { margin-left: 10px; }
+
+.hidden { display: none; }
+
+hr { margin: 1.5em 0; }
+
+@font-face { font-family: "HoeflerTextBlack"; src: local("☺"), url('/fonts/hoefler_text-webfont.svg') format('svg'), url('/fonts/hoefler_text-webfont.woff') format('woff'), url('/fonts/hoefler_text-webfont.ttf') format('truetype'); }
+
+@media screen and (max-device-width: 480px) { @font-face { font-family: "HoeflerTextBlack"; src: url('/fonts/hoefler_text-webfont.svg') format('svg'), url('/fonts/hoefler_text-webfont.woff') format('woff'), url('/fonts/hoefler_text-webfont.ttf') format('truetype'); } }
+html, body { height: 100%; }
+
+#root { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -80px; }
+#root #root_footer { height: 80px; }
+
+#footer { clear: both; position: relative; height: 80px; }
+
+body { background: url(/images/frame/body_bg.png) repeat-x 0px 100px #f1eee4; font-family: Times, "Times New Roman", Georgia, serif !important; }
+
+#header_delimeter { background-color: #001301; height: 8px; width: 100%; position: absolute; top: 105px; left: 0px; }
+
+#header_delimeter_fade { background: url(/images/frame/fade_up.png) repeat-x 0 0px transparent; height: 13px; width: 100%; position: absolute; top: 92px; left: 0px; }
+
+#header_bg { background: url(/images/frame/header_bg.jpg) repeat-x scroll 0 0 #f1eee4; height: 100px; position: absolute; top: 5px; left: 0px; width: 100%; z-index: -1; }
+
+#header { height: 177px; position: relative; }
+#header #header_fruit { background: url(/images/frame/header_fruit.png) no-repeat scroll 0 0 transparent; height: 104px; left: 199px; position: absolute; top: 7px; width: 578px; z-index: -1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+#header #banner_logo { background: url(/images/frame/yakima_press_company_logo.png) no-repeat 0 0px transparent; position: absolute; left: 350px; top: 5px; height: 314px; width: 251px; }
+
+div#main_container { min-height: 140px; margin-bottom: 100px; /* to offset -80px margin on footer */ }
+
+div#footer { background-color: #001301; color: white; letter-spacing: .05em; font-size: .9em; line-height: 1.4em; }
+div#footer #footer_delimeter_fade { background: url(/images/frame/fade_up.png) repeat-x 0 0px transparent; height: 13px; width: 100%; position: relative; top: -13px; left: 0px; margin-bottom: 12px; }
+div#footer div.delimeter { display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; color: #7FB86B; border-right: solid 1px white; margin: 0 5px 0 0; padding: 0 0 0 5px; }
+div#footer div.delimeter { *display: inline; }
+div#footer span.cap { font-size: 1.3em; text-transform: uppercase; }
+div#footer span.lc { font-size: .9em; text-transform: uppercase; }
+div#footer a { color: white; text-decoration: none; }
+div#footer a:hover { text-decoration: underline; }
+
+div#swirly_twirlyC { position: relative; height: 165px; margin-bottom: 10px; }
+div#swirly_twirlyC div#swirly_twirlyL, div#swirly_twirlyC div#swirly_twirlyR { position: absolute; top: -64px; left: 0px; z-index: -1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
+div#swirly_twirlyC div#swirly_twirlyL { background: url(/images/sprites/swirly-twirly.png) no-repeat scroll 0px 0px transparent; height: 220px; width: 426px; }
+div#swirly_twirlyC div#swirly_twirlyR { background: url(/images/sprites/swirly-twirly.png) no-repeat scroll -428px 0px transparent; height: 220px; width: 426px; left: 524px; }
+
+h1 { /*  font-family : "HoeflerTextBlack";*/ font-weight: normal; font-size: 2.8em; color: #410000; text-shadow: 1px 1px #fff; }
+
+h1#page_title { font-style: italic; text-align: center; margin-bottom: 1em; }
+
+#menu_bar { background-color: #e7e3d4; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60); opacity: 0.6; color: #001301; position: absolute; top: 113px; left: 0px; height: 63px; border-bottom: solid 1px #476443; width: 100%; }
+
+ul#menuC { list-style-type: none; margin: 0 0 0 5px; padding: 0; position: absolute; top: 121px; color: #002c03; }
+ul#menuC li { display: inline; float: left; width: 119px; text-transform: uppercase; letter-spacing: .1em; }
+ul#menuC li a { color: #002c03; text-decoration: none; }
+ul#menuC li a:hover { text-decoration: underline; }
+ul#menuC li div.title { height: 2.2em; }
+ul#menuC li div.title span.cap { font-size: 2.1em; text-transform: uppercase; }
+ul#menuC li div.title span.lc { font-size: 1.4em; text-transform: uppercase; }
+ul#menuC li div.descr { font-size: .7em; height: 2.2em; padding: 0; margin: 0 1px 0 0; text-shadow: 1px 1px #999; display: -moz-inline-box; -moz-box-orient: vertical; display: inline-block; vertical-align: middle; *vertical-align: auto; }
+ul#menuC li div.descr { *display: inline; }
+ul#menuC li div.descr span.cap { font-size: 1.5em; text-transform: uppercase; }
+ul#menuC li div.descr span.lc { font-size: 1.2em; text-transform: uppercase; }
+ul#menuC li.spacer { width: 240px; }
+ul#menuC li.last { width: 110px; }
+
+span.cap { font-size: 1.9em; text-transform: uppercase; }
+
+span.lc { font-size: 1em; text-transform: uppercase; }
+
+div.admin_area { float: right; font-size: 12px; }
+
+.formC_700 { width: 700px; }
+
+.field { margin-bottom: 10px; }
+.field label { display: block; }
+.field label[data-type="checkbox"] { display: inline; margin-left: 5px; }
+.field textarea { height: 20em; width: 80%; margin: 0; }
+.field textarea, .field input[type="text"], .field input[type="password"] { padding: 4px; border: 1px solid #999; color: #333; width: 97%; margin: 0; }
+
+.actions { margin: 1.5em 0; }
+
+div.disabled_form_field { padding: 4px; border: 1px solid #999; color: #333; width: 97%; background-color: #dadada; margin-bottom: 5px; }
+
+/*-----------------------------------------------------------------------  easy element modificaction through simple class assignment ------------------------------------------------------------------------ */
+.marginT { margin-top: 10px; }
+
+.marginR { margin-right: 10px; }
+
+.marginB { margin-bottom: 10px; }
+
+.marginL { margin-left: 10px; }
+
+.hidden { display: none; }
+
+hr { margin: 1.5em 0; }
+
+#productsC { font-size: 1.2em; }
+#productsC h1 { color: #001301; font-size: 2.65em; text-align: left; font-style: normal; margin: 10px 0; }
+#productsC p { font-family: arial, helvetica, sans-serif; color: #000; }
+#productsC .flaged { font-size: .95em; border: 1.6em solid #001301; border-left: 1.6em solid transparent; height: 0px; color: white; text-align: right; padding: 0 .25em 0 0; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -o-border-top-right-radius: 4px; -ms-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -o-border-bottom-right-radius: 4px; -ms-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+#productsC .flaged a { color: white; text-decoration: underline; }
+#productsC .flaged a:hover { text-decoration: none; }
+#productsC .flaged span { position: relative; top: -0.65em; }
+
+/*-----------------------------------------------------------------------  easy element modificaction through simple class assignment ------------------------------------------------------------------------ */
+.marginT { margin-top: 10px; }
+
+.marginR { margin-right: 10px; }
+
+.marginB { margin-bottom: 10px; }
+
+.marginL { margin-left: 10px; }
+
+.hidden { display: none; }
+
+hr { margin: 1.5em 0; }
+
+#productC { background-color: #f1eee4; padding: 20px 10px; }
+#productC h2 { font-size: 2.2em; color: #410000; margin-bottom: 0px; }
+#productC div.price { font-size: 2.2em; color: #001301; margin-bottom: 0px; }
+#productC p { font-family: arial,helvetica,sans-serif; margin-bottom: 1em; font-size: 1em; line-height: 1.8em; }
+#productC b { display: block; }
+#productC ul { margin: 0; font-family: arial,helvetica,sans-serif; }
+
+#hero_image { width: 450px; height: 300px; }
+
+p.thumbs img { border: solid 1px transparent; width: 100px; height: 100px; padding: 4px; }
+p.thumbs img:hover { border-color: #FF9900; background-color: white; }
+
+/*-----------------------------------------------------------------------  easy element modificaction through simple class assignment ------------------------------------------------------------------------ */
+.marginT { margin-top: 10px; }
+
+.marginR { margin-right: 10px; }
+
+.marginB { margin-bottom: 10px; }
+
+.marginL { margin-left: 10px; }
+
+.hidden { display: none; }
+
+hr { margin: 1.5em 0; }
+
+.button { border: 1px solid #555555; color: #112233 !important; display: block; float: left; font-size: 11px; font-weight: bold; padding: 3px 10px 2px 10px; text-align: center; margin-top: 0px; line-height: 14px; text-decoration: none; text-shadow: 0 1px #ffffff; white-space: nowrap; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; -khtml-border-radius: 4px; border-radius: 4px; text-shadow: 1px 1px white; /*background : url("/img/sprites/vertical_backgrounds.png") repeat-x scroll 0 -173px transparent;*/ background: #dadada; }
+
+.button { cursor: pointer; }
+
+.button img { margin-top: -1px; }
+
+html* input.button { line-height: 12px; margin-top: -4px; }
+
+.button:hover, .button.sel { color: black !important; }
+
+.button:active { /*background-position : 0px -59px;*/ background-color: #dadada; }
+
+.button.b100 { width: 100px; }
+
+.button.b150 { width: 150px; }
+
+.button.b200 { width: 200px; }
+
+.button.b250 { width: 250px; }
+
+.button.alert:hover { color: #410000 !important; border-color: #410000; background-color: white; text-shadow: none; }
+
+div.blockMsg { background: url("/images/20_white_opacity_1x1.png") repeat scroll 0 0 transparent; border: 1px solid #868686; padding: 0; margin: 0; top: 35%; left: 35%; color: #000; cursor: 'wait'; }
+
+div.blockMsg p#modal_contentC { margin: 10px; padding: 40px; background: #ffffff; font-align: left; }
+
+div.blockMsg, p#modal_contentC { -moz-border-radius: 7px; -webkit-border-radius: 7px; -o-border-radius: 7px; -ms-border-radius: 7px; -khtml-border-radius: 7px; border-radius: 7px; }

@@ -1,0 +1,41 @@
+
+= form_for @product do |f|
+  = render :partial => 'shared/user_notice', :locals => {:model_obj => @product}
+
+  %div.formC_700
+    .field
+      = f.label :name, 'Name'
+      = f.text_field :name
+
+    .field
+      = f.label :permalink, 'Permalink'
+      %div.disabled_form_field= @product.permalink
+
+    .field
+      = f.label :descr, 'Description'
+      = f.text_area :descr
+
+    .field
+      = f.label :price
+      = f.text_field :price
+
+    .field
+      = f.label :sale_price
+      = f.text_field :sale_price
+    
+    .field
+      = f.label :meta_description, 'Meta Description'
+      = f.text_field :meta_description
+
+    .field
+      = f.label :meta_keywords, 'Meta Keywords'
+      = f.text_field :meta_keywords
+
+    .actions.clearfix
+      = f.submit 'Save Product Information', :class => :button
+
+%hr
+= render :partial => 'photos/form'
+%hr
+= render :partial => 'photos/destroy'
+
