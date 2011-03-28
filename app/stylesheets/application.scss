@@ -1,3 +1,12 @@
+@import "partials/helpers";
+
+h2 {
+    font-size : 2.2em;
+    color : $dark_green;
+    margin-bottom : 0px;
+}
+
+
 @import "partials/frame";
 @import "partials/menu";
 @import "partials/all_cap";
@@ -11,5 +20,6 @@
 @import "partials/home";
 @import "partials/product_page";
 @import "partials/contact_form";
+@import "partials/about";
 
 

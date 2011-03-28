@@ -1,1 +1,63 @@
-websites/yakimapress/app/views/home/about.haml
+:ruby
+  page_title("Our story begins in the Yakima Valley with a passion for wine and cider.")
+
+%div#aboutC.container
+  %div.prepend-5.span-38.append-5
+    %h2 History
+
+    %div.span-38.last
+      %div.span-18.append-2
+        The cider and wine presses manufactured by Yakima Press Company are built from a tradition that started in 1975 with
+        the birth of the American Village Institute. Located in the Northeast corner of Washington State, the Institute was
+        formed by a small group of “villagers” who were dedicated to teaching others how to become more self-sufficient, not
+        only as individuals, but also how to create self sufficient communities, or villages. Under this concept the American
+        Village Institute creating a number of hand and foot operated tools, including cider presses, wine presses, corn
+        shellers, root cutters, flour mills, and many other tools. The Institute’s aim was to develop a contemporary version
+        of the tools
+
+      %div.span-18.last
+        needed to become self-sufficient while incorporating modern technology and knowledge. In the1980’s
+        William (Bill) Courtis, a former professor at the American Village Institute, and a partner purchased most of the
+        Institutes assets after the American Village Institute ceased to operate. Bill has spent the last 25 years building
+        cider and wine presses in the same town where it all started. He hand crafts each press from start to finish at his
+        shop, The Phoenix Foundry, which includes a complete foundry, woodworking shop, and machine shop. Thankfully, Bill has
+        passed on his experience, knowledge, and skills to allow the tradition to continue through the Yakima Press Company.
+
+    %h2 Yakima Press Company
+
+    %div.span-38.last
+      %div.span-18.append-2
+        Located in the heart of apple country, Yakima Press Company was formed to carry on traditions that started with the
+        birth of America. Apple cider has a long history, dating back to Roman times, but in Colonial America cider was the
+        most common beverage. As water was unsafe in many areas, cider was drank by everyone, and even used for paying tithes,
+        taxes, and wages. Due to a variety of factors, cider production fell dramatically
+
+      %div.span-18.last
+        around the turn of the 1900’s and dropped even further with prohibition. Recently, we have seen an increased
+        awareness and interest in both sweet and hard cider. Regardless of trends, Yakima Press Company is dedicated to
+        manufacturing the highest quality cider and wine presses in the industry. Each handcrafted cider and/or wine
+        press is proudly made in the USA.
+
+    %h2 Contact
+
+    %div#contactC.container
+      %div.span-16
+        %div.span-16.last
+          %b Yakima Press Company, LLC
+
+        %div.span-5 Phone:
+        %div.span-10.last 509-480-0642
+
+        %div.span-5 Email:
+        %div.span-10.last= "#{mail_to 'info@yakimapress.com'} <br /> #{link_to 'website contact us form', contact_path}".html_safe
+
+        %div.span-5 Address:
+        %div.span-10.last 361 Charlie Lane
+
+        %div.span-5 &nbsp;
+        %div.span-10.last Naches, Washington 98937 USA
+
+      %div.span-22
+        :plain
+          <iframe width="425" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Naches,+WA&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=52.947994,76.201172&amp;ie=UTF8&amp;hq=&amp;hnear=Naches,+Yakima,+Washington&amp;ll=46.730958,-120.699516&amp;spn=10.980957,19.050293&amp;z=6&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Naches,+WA&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=52.947994,76.201172&amp;ie=UTF8&amp;hq=&amp;hnear=Naches,+Yakima,+Washington&amp;ll=46.730958,-120.699516&amp;spn=10.980957,19.050293&amp;z=6" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+

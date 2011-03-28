@@ -1,0 +1,21 @@
+@import "partials/helpers";
+
+#aboutC {
+    div {
+        margin : .5em 0 1.5em 0;
+        font-family : arial, helvetica, sans-serif;
+        font-size : 1em;
+        text-align : justify;
+        line-height : 1.6em;
+    }
+    #contactC div {
+        margin : 0;
+        text-align : left;
+    }
+    #contactC .span-5 {
+        text-align : right;
+        font-weight : bold;
+        margin-right : 20px;
+    }
+
+}
