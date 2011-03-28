@@ -6,12 +6,12 @@
     
     h2 {
         font-size : 2.2em;
-        color : $alert;
+        color : $dark_green;
         margin-bottom : 0px;
     }
     div.price {
         font-size : 2.2em;
-        color : $green;
+        color : $alert;
         margin-bottom : 0px;
     }
     p {
@@ -26,6 +26,38 @@
     ul {
         margin : 0;
         font-family : arial,helvetica,sans-serif;
+    }
+}
+
+#atcC { /* contact engine */
+    form { position : relative; }
+
+    input#quantity {
+        width : 22px !important;
+    }
+    input[type="submit"] {
+        width : 300px;
+        margin : 0 0 0 45px;
+        font-size : 1.6em;
+        padding : .5em .25em;
+    }
+    #quantityC {
+        position: absolute;
+        left : 360px;
+        top  : 4px;
+        
+        label[for="quantity"] {
+            position : absolute;
+            top : -5px;
+            left : 0px;
+        }
+        input#quantity {
+            position : absolute;
+            top  : 13px;
+            left : 8px;
+            margin : 0px;
+            text-align : center;
+        }
     }
 }
 

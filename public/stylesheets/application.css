@@ -2,32 +2,32 @@
 /*----------------------------------------------------------------------- 
     easy element modificaction through simple class assignment
  ------------------------------------------------------------------------ */
-/* line 16, ../../app/stylesheets/partials/_helpers.scss */
+/* line 17, ../../app/stylesheets/partials/_helpers.scss */
 .marginT {
   margin-top: 10px;
 }
 
-/* line 17, ../../app/stylesheets/partials/_helpers.scss */
+/* line 18, ../../app/stylesheets/partials/_helpers.scss */
 .marginR {
   margin-right: 10px;
 }
 
-/* line 18, ../../app/stylesheets/partials/_helpers.scss */
+/* line 19, ../../app/stylesheets/partials/_helpers.scss */
 .marginB {
   margin-bottom: 10px;
 }
 
-/* line 19, ../../app/stylesheets/partials/_helpers.scss */
+/* line 20, ../../app/stylesheets/partials/_helpers.scss */
 .marginL {
   margin-left: 10px;
 }
 
-/* line 20, ../../app/stylesheets/partials/_helpers.scss */
+/* line 21, ../../app/stylesheets/partials/_helpers.scss */
 .hidden {
   display: none;
 }
 
-/* line 22, ../../app/stylesheets/partials/_helpers.scss */
+/* line 23, ../../app/stylesheets/partials/_helpers.scss */
 hr {
   margin: 1.5em 0;
 }
@@ -393,32 +393,32 @@ div.disabled_form_field {
 /*----------------------------------------------------------------------- 
     easy element modificaction through simple class assignment
  ------------------------------------------------------------------------ */
-/* line 16, ../../app/stylesheets/partials/_helpers.scss */
+/* line 17, ../../app/stylesheets/partials/_helpers.scss */
 .marginT {
   margin-top: 10px;
 }
 
-/* line 17, ../../app/stylesheets/partials/_helpers.scss */
+/* line 18, ../../app/stylesheets/partials/_helpers.scss */
 .marginR {
   margin-right: 10px;
 }
 
-/* line 18, ../../app/stylesheets/partials/_helpers.scss */
+/* line 19, ../../app/stylesheets/partials/_helpers.scss */
 .marginB {
   margin-bottom: 10px;
 }
 
-/* line 19, ../../app/stylesheets/partials/_helpers.scss */
+/* line 20, ../../app/stylesheets/partials/_helpers.scss */
 .marginL {
   margin-left: 10px;
 }
 
-/* line 20, ../../app/stylesheets/partials/_helpers.scss */
+/* line 21, ../../app/stylesheets/partials/_helpers.scss */
 .hidden {
   display: none;
 }
 
-/* line 22, ../../app/stylesheets/partials/_helpers.scss */
+/* line 23, ../../app/stylesheets/partials/_helpers.scss */
 hr {
   margin: 1.5em 0;
 }
@@ -480,32 +480,32 @@ hr {
 /*----------------------------------------------------------------------- 
     easy element modificaction through simple class assignment
  ------------------------------------------------------------------------ */
-/* line 16, ../../app/stylesheets/partials/_helpers.scss */
+/* line 17, ../../app/stylesheets/partials/_helpers.scss */
 .marginT {
   margin-top: 10px;
 }
 
-/* line 17, ../../app/stylesheets/partials/_helpers.scss */
+/* line 18, ../../app/stylesheets/partials/_helpers.scss */
 .marginR {
   margin-right: 10px;
 }
 
-/* line 18, ../../app/stylesheets/partials/_helpers.scss */
+/* line 19, ../../app/stylesheets/partials/_helpers.scss */
 .marginB {
   margin-bottom: 10px;
 }
 
-/* line 19, ../../app/stylesheets/partials/_helpers.scss */
+/* line 20, ../../app/stylesheets/partials/_helpers.scss */
 .marginL {
   margin-left: 10px;
 }
 
-/* line 20, ../../app/stylesheets/partials/_helpers.scss */
+/* line 21, ../../app/stylesheets/partials/_helpers.scss */
 .hidden {
   display: none;
 }
 
-/* line 22, ../../app/stylesheets/partials/_helpers.scss */
+/* line 23, ../../app/stylesheets/partials/_helpers.scss */
 hr {
   margin: 1.5em 0;
 }
@@ -518,13 +518,13 @@ hr {
 /* line 7, ../../app/stylesheets/partials/_product_page.scss */
 #productC h2 {
   font-size: 2.2em;
-  color: #410000;
+  color: #201400;
   margin-bottom: 0px;
 }
 /* line 12, ../../app/stylesheets/partials/_product_page.scss */
 #productC div.price {
   font-size: 2.2em;
-  color: #001301;
+  color: #410000;
   margin-bottom: 0px;
 }
 /* line 17, ../../app/stylesheets/partials/_product_page.scss */
@@ -545,19 +545,59 @@ hr {
 }
 
 /* line 32, ../../app/stylesheets/partials/_product_page.scss */
+#atcC {
+  /* contact engine */
+}
+/* line 33, ../../app/stylesheets/partials/_product_page.scss */
+#atcC form {
+  position: relative;
+}
+/* line 35, ../../app/stylesheets/partials/_product_page.scss */
+#atcC input#quantity {
+  width: 22px !important;
+}
+/* line 38, ../../app/stylesheets/partials/_product_page.scss */
+#atcC input[type="submit"] {
+  width: 300px;
+  margin: 0 0 0 45px;
+  font-size: 1.6em;
+  padding: .5em .25em;
+}
+/* line 44, ../../app/stylesheets/partials/_product_page.scss */
+#atcC #quantityC {
+  position: absolute;
+  left: 360px;
+  top: 4px;
+}
+/* line 49, ../../app/stylesheets/partials/_product_page.scss */
+#atcC #quantityC label[for="quantity"] {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+}
+/* line 54, ../../app/stylesheets/partials/_product_page.scss */
+#atcC #quantityC input#quantity {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  margin: 0px;
+  text-align: center;
+}
+
+/* line 64, ../../app/stylesheets/partials/_product_page.scss */
 #hero_image {
   width: 450px;
   height: 300px;
 }
 
-/* line 37, ../../app/stylesheets/partials/_product_page.scss */
+/* line 69, ../../app/stylesheets/partials/_product_page.scss */
 p.thumbs img {
   border: solid 1px transparent;
   width: 100px;
   height: 100px;
   padding: 4px;
 }
-/* line 43, ../../app/stylesheets/partials/_product_page.scss */
+/* line 75, ../../app/stylesheets/partials/_product_page.scss */
 p.thumbs img:hover {
   border-color: #FF9900;
   background-color: white;
@@ -566,32 +606,32 @@ p.thumbs img:hover {
 /*----------------------------------------------------------------------- 
     easy element modificaction through simple class assignment
  ------------------------------------------------------------------------ */
-/* line 16, ../../app/stylesheets/partials/_helpers.scss */
+/* line 17, ../../app/stylesheets/partials/_helpers.scss */
 .marginT {
   margin-top: 10px;
 }
 
-/* line 17, ../../app/stylesheets/partials/_helpers.scss */
+/* line 18, ../../app/stylesheets/partials/_helpers.scss */
 .marginR {
   margin-right: 10px;
 }
 
-/* line 18, ../../app/stylesheets/partials/_helpers.scss */
+/* line 19, ../../app/stylesheets/partials/_helpers.scss */
 .marginB {
   margin-bottom: 10px;
 }
 
-/* line 19, ../../app/stylesheets/partials/_helpers.scss */
+/* line 20, ../../app/stylesheets/partials/_helpers.scss */
 .marginL {
   margin-left: 10px;
 }
 
-/* line 20, ../../app/stylesheets/partials/_helpers.scss */
+/* line 21, ../../app/stylesheets/partials/_helpers.scss */
 .hidden {
   display: none;
 }
 
-/* line 22, ../../app/stylesheets/partials/_helpers.scss */
+/* line 23, ../../app/stylesheets/partials/_helpers.scss */
 hr {
   margin: 1.5em 0;
 }
