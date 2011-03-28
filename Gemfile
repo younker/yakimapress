@@ -21,7 +21,7 @@ gem 'paperclip' # http://patshaughnessy.net/2010/5/23/how-to-install-paperclip-i
 
 # gem 'hoptoad_notifier'
 
-gem 'contact'
+gem 'contact', :path => '/websites/Engines/contact'
 gem 'ecommerce', :require => 'ecommerce', :path => '/websites/Engines/ecommerce'
 
 group :development, :test do 

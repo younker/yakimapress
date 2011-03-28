@@ -32,7 +32,7 @@ module Yakimapress
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails jquery.modal)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails jquery.modal jquery.growl)
     config.action_view.stylesheet_expansions[:defaults] = %w(application)
 
     config.generators do |g|

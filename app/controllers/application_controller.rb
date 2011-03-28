@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  # include Ecommerce::ApplicationController
   # include Younker::SslRequirement
 
   protect_from_forgery
@@ -51,5 +52,31 @@ class ApplicationController < ActionController::Base
 
     url
   end
+
+
+  ##
+  ## FIXME -- younker [2011-03-27 12:21]
+  ##   I cannot get the Ecommerce engine's cart_controller to inherit from the Ecommerce.application_controller rather
+  ##   than this one. In short, I can't put find_cart in the Ecommerce app_controller and have it be found/usable in
+  ##   the client app
+  ##
+  extend ActiveSupport::Memoizable
+
+  helper_method :find_cart
+
+  def find_cart
+    cart = Cart.find_by_id(session[:cart_id]) unless session[:cart_id].nil?
+
+    if !cart || cart.purchased?
+      cart = Cart.new()
+      cart.save!
+      session[:cart_id] = cart.id
+    end
+    cart
+  end
+  memoize :find_cart
+
+
+
 
 end

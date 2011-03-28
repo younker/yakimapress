@@ -1,0 +1,36 @@
+@import "compass/css3/border-radius";
+
+#new_contactC {
+    width : 450px;
+    margin : 0 0 0 250px;
+
+    h1 {
+        text-align : center;
+    }
+    fieldset {
+        border : none !important;
+
+        legend, label { display : none !important; }
+
+        .field { margin-bottom : 1.6em; }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            @include border-radius(4px);
+            font-size : 1.6em;
+            padding : .5em 5px;
+            width : 100%;
+            margin : 0;
+        }
+        
+        .actions {
+            width : 103%;
+            .button {
+                width : 100%;
+                font-size : 1.6em;
+                padding : .5em 5px;
+            }
+        }
+    }
+}

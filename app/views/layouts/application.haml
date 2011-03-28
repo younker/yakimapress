@@ -41,6 +41,8 @@
         %div#swirly_twirlyC
           %div#swirly_twirlyL &nbsp;
           %div#swirly_twirlyR &nbsp;
+          = render :partial => 'shared/quick_cart'
+
 
         - if content_for?(:page_title)
           %div.prepend-6.span-36.append-6.last= yield(:page_title)
