@@ -3,8 +3,8 @@ class LoadProducts < ActiveRecord::Migration
   @cider_permalink = 'american-harvester-cider-mill-apple-press'
 
   def self.up
-    Product.create!(:name => 'Wine Press', :permalink => @wine_permalink, :descr => self.lorem, :price => 799.99, :meta_description => 'this is the wine press meta desription', :meta_keywords => 'wine,press,wine press,yakima,grapes,get drunk')
-    Product.create!(:name => 'American Harvester Cider Mill', :permalink => @cider_permalink, :descr => self.cider_press_descr, :price => 999.99, :meta_description => 'The American Harvester is a double tub, hand operated cider mill apple press.', :meta_keywords => 'cider mill, american harvester, double tub, apple press, cider, press, cider press, yakima, apples')
+    Product.create!(:name => 'Wine Press', :press_type => 'wine', :permalink => @wine_permalink, :descr => self.lorem, :price => 799.99, :meta_description => 'this is the wine press meta desription', :meta_keywords => 'wine,press,wine press,yakima,grapes,get drunk')
+    Product.create!(:name => 'American Harvester Cider Press', :press_type => 'cider', :permalink => @cider_permalink, :descr => self.cider_press_descr, :price => 999.99, :meta_description => 'The American Harvester is a double tub, hand operated cider mill apple press.', :meta_keywords => 'cider press, cider mill, american harvester, double tub, apple press, cider, press, mill, cider press, yakima, apples')
   end
 
   def self.down

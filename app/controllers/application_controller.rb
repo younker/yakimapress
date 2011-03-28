@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  # include Ecommerce::ApplicationController
+  # extend EcommerceController
   # include Younker::SslRequirement
 
   protect_from_forgery

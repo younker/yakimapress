@@ -11,6 +11,8 @@ class CreateEcommerceTables < ActiveRecord::Migration
       t.text :meta_description
       t.text :meta_keywords
       t.string :tags
+      t.int :shipping_weight
+      t.string :press_type, :null => false
       t.timestamps
     end
 

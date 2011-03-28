@@ -1,0 +1,12 @@
+%div.productC.spv
+  %div.product_imageC
+    - img = image_tag product.photos.first.photo.url(:large), :alt => "#{product.name} | YakimaPress.com"
+    = permalink(product, img)
+    
+  %h2= "Our Featured #{permalink(product, press_name(product), {:downcase => false})}".html_safe
+  %div.price= product.pricef
+  = product.descr.truncate(550, :omission => "...").html_safe
+
+  %div.linkC= "View this #{permalink(product, press_name(product))}".html_safe
+
+

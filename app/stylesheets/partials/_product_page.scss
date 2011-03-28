@@ -2,7 +2,7 @@
 
 #productC {
     background-color : $bg_cream;
-    padding : 20px 10px;
+    padding : 20px;
     
     h2 {
         font-size : 2.2em;
@@ -27,6 +27,40 @@
         margin : 0;
         font-family : arial,helvetica,sans-serif;
     }
+
+    .product_imageC {
+        width : 445px;
+        height : 170px;
+        border : 2px solid $green;
+        overflow : hidden;
+    }
+
+    .spv { /* single product view */
+        font-family: arial,helvetica,sans-serif;
+        font-size: 1em;
+        line-height: 1.8em;
+        margin-bottom: 1em;
+
+        h2 a {
+            margin : .2em 0 0 0;
+            line-height : 1.8em;
+            color : $dark_green;
+            text-decoration : none;
+        }
+        h2 a:hover { text-decoration : underline; }
+
+        .price {
+            margin : 0 0 .2em 0;
+            letter-spacing : .05em;
+            font-size : 1.6em;
+        }
+        .linkC {
+            margin : .25em 0;
+        }
+    }
+
+
+
 }
 
 #atcC { /* contact engine */
@@ -42,6 +76,7 @@
         padding : .5em .25em;
     }
     #quantityC {
+        font-family : arial, helvetica, sans-serif;
         position: absolute;
         left : 360px;
         top  : 4px;

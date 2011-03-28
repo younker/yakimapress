@@ -1,0 +1,28 @@
+:ruby
+  page_title('Our products are built to last while creating memories along the way.')
+
+%div#productC.clearfix.container
+  %div.span-24
+    = render :partial => 'products/show/photos'
+  %div.span-22
+    %h2
+      = @product.name
+      = admin_area do
+        = link_to 'Edit', edit_product_path(@product.permalink)
+
+    - if @product.price?
+      %div.price= @product.pricef
+
+    = sanitize @product.descr, :tags => %w(br p a b ul li), :attributes => %w(href)
+
+    %div#atcC
+      - form_tag cart_path(), :method => :put do
+        = hidden_field_tag :product_id, @product.id
+
+        #atc_button.actions.clearfix
+          = submit_tag 'Add To Cart', :class => :button
+
+        .field#quantityC
+          %label{:for => :quantity, :class => :inline} Quantity:
+          = text_field_tag :quantity, 1, :size => 2
+

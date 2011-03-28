@@ -1,0 +1,10 @@
+:ruby
+  page_title("We create beautiful wine & cider presses for personal and commercial use.")
+
+%div#productC.container
+  %div.leftC.span-23
+    = render :partial => 'products/index/product', :locals => {:product => @wine_press}
+
+  %div.rightC.span-23
+    = render :partial => 'products/index/product', :locals => {:product => @cider_press}
+    
