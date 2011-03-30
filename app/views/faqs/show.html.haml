@@ -1,0 +1,13 @@
+:ruby
+  page_title(@faq.question, 'faq_page')
+
+%div#faqC.clearfix.container
+  %div.span-8 &nbsp;
+  %div.span-32
+    = sanitize @faq.answer, :tags => %w(br p a b ul li), :attributes => %w(href)
+
+  %div.span-8.last
+    = admin_area do
+      = link_to 'Edit', edit_faq_path(@faq)
+      |
+      = link_to 'Destroy', @faq, :confirm => 'Are you sure?', :method => :delete

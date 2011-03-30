@@ -1,5 +1,9 @@
 class ProductsController < InheritedResources::Base
-  before_filter :set_product, :only => [:edit, :update]
+  before_filter :redirect_unless_admin, :except => [:index, :search, :by_permalink]
+
+  before_filter :set_product, :except => [:index, :new, :create, :search]
+  before_filter :set_canonical, :except => [:index, :search, :create, :edit, :update, :destroy]
+
 
   def index
     @wine_press = Product.find_by_permalink('wine-press')
@@ -20,16 +24,26 @@ class ProductsController < InheritedResources::Base
       
   # Route catch-all for pages like /wine-press
   def by_permalink
-    if @product = Product.find_by_permalink(params['path'])
+    if @product.present?
       render :template => 'products/show'
     else
       render :template => 'public/404.html', :status => '404'
     end
   end
 
+
   private 
 
   def set_product
-    @product = Product.find_by_permalink(params['id']) || Product.find_by_id(params['id'])
+    Rails.logger.info("----------------------------- products_controller.rb:38")
+    tmp = params['id'].present? ? params['id'] : params['path']
+    @product = Product.find_by_permalink(tmp) || Product.find_by_id(tmp)
+    Rails.logger.info("----------------------------- products_controller.rb:40 - @product = '#{@product.inspect}'")
   end
+
+  def set_canonical
+    Rails.logger.info("----------------------------- products_controller.rb:44 - @product_url = '#{@product_url.inspect}'")
+    @canonical = product_url(@product.permalink) unless product_path(@product.permalink) == request.path
+  end
+
 end

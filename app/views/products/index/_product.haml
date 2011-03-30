@@ -5,7 +5,7 @@
     
   %h2= "Our Featured #{permalink(product, press_name(product), {:downcase => false})}".html_safe
   %div.price= product.pricef
-  = product.descr.truncate(550, :omission => "...").html_safe
+  = product.descr.truncate(550, "...").html_safe
 
   %div.linkC= "View this #{permalink(product, press_name(product))}".html_safe
 

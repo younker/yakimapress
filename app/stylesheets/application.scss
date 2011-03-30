@@ -6,6 +6,14 @@ h2 {
     margin-bottom : 0px;
 }
 
+hr { margin : 1.5em 0; }
+
+/*  easy element modificaction through simple class assignment */
+.marginT { margin-top    : 10px; }
+.marginR { margin-right  : 10px; }
+.marginB { margin-bottom : 10px; }
+.marginL { margin-left   : 10px; }
+.hidden  { display : none; }
 
 @import "partials/frame";
 @import "partials/menu";
@@ -21,5 +29,7 @@ h2 {
 @import "partials/product_page";
 @import "partials/contact_form";
 @import "partials/about";
+@import "partials/american_village_institute";
+@import "partials/faq";
 
 

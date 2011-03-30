@@ -2,7 +2,8 @@
 
 form.scaffold {
     width : 700px;
-        .field {
+
+    .field {
         margin-bottom : 10px;
 
         label {
@@ -30,6 +31,14 @@ form.scaffold {
         }
     }
 
+    .field.halfh {
+        textarea { height : 10em; }
+    }
+    .field.quarterh {
+        textarea { height : 5em; }
+    }
+
+
     div.disabled_form_field {
         padding : 4px;
         border  : 1px solid #999;
@@ -39,6 +48,7 @@ form.scaffold {
         margin-bottom : 5px;
     }
 }
+
 .actions {
     margin : 1.5em 0;
 }

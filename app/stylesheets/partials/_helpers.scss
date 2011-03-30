@@ -10,15 +10,6 @@ $alert : #410000;
     width  : #{$w}px;
 }
 
+$arial : arial, helvetica, sans-serif;
 
-/*----------------------------------------------------------------------- 
-    easy element modificaction through simple class assignment
- ------------------------------------------------------------------------ */
-.marginT { margin-top    : 10px; }
-.marginR { margin-right  : 10px; }
-.marginB { margin-bottom : 10px; }
-.marginL { margin-left   : 10px; }
-.hidden  { display : none; }
-
-hr { margin : 1.5em 0; }
 

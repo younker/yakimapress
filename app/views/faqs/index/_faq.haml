@@ -1,0 +1,3 @@
+%li
+  %h1= link_to faq.question, faq_path(faq.permalink)
+  = sanitize faq.answer, :tags => %w(br p a b ul li), :attributes => %w(href)

@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+
+  # FIXME -- younker [2011-03-30 00:59]
+  # Should either get this out or change it so the cart uses it
   include ActionView::Helpers::NumberHelper
   
   has_many :photos

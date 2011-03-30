@@ -10,6 +10,11 @@ PATH
     ecommerce (0.0.1)
       rails
 
+PATH
+  remote: /websites/Gems/younker-string-extensions
+  specs:
+    younker-string-extensions (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -152,3 +157,4 @@ DEPENDENCIES
   rspec-rails (~> 2.5)
   younker-generators (>= 1.0.0)
   younker-ssl_requirement
+  younker-string-extensions!

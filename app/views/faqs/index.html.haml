@@ -1,0 +1,17 @@
+:ruby
+  page_title('Frequently Asked Questions')
+
+%div#faqC.clearfix.container
+  %div.span-8 &nbsp;
+  %div.span-32
+    - if @faqs.empty?
+      Sorry, but there are currently no frequently asked questions! Please check back soon.
+    - else
+      %ul
+        = render :partial => 'faqs/index/faq', :collection => @faqs
+  
+
+  %div.span-8.last
+    = admin_area do
+      = link_to 'New Faq', new_faq_path
+

@@ -1,0 +1,45 @@
+@import "partials/helpers";
+
+h1#page_title.faq_page {
+    text-align : left !important;
+}
+
+#faqC {
+    font-size : 1.1em;
+    font-family : $arial;
+    line-height : 1.6em;
+    
+    ul {
+        list-style-type : none;
+        h1 {
+            font-size : 1.4em;
+            font-weight : bold;
+            border-bottom : 1px dotted $dark_green;
+
+            a {
+                color : $dark_green;
+                text-decoration : none;
+            }
+            a:hover { color : $green; }
+        }
+        li {
+            margin : 0 0 2em 0;
+        }
+    }
+
+    #h1 {
+        font-size : 1.8em;
+        line-height : 2em;
+        border-bottom : solid 1px;
+    }
+}
+
+
+form.faq {
+    a.autogen {
+        text-decoration : none;
+        float : right;
+        margin : 0 12px 0 0;
+        font-weight : normal;
+    }
+}

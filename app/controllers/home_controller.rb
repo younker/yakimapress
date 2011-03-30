@@ -7,7 +7,11 @@ class HomeController < ApplicationController
   def about
   end
 
-  def faq
+  def american_village_institute
   end
-  
+
+  def generate_permalink
+    render :text => params[:string].present? ? params[:string].make_url_friendly : nil
+  end
+
 end

@@ -46,3 +46,28 @@ jQuery.extend(jQuery, {
     }
 
 });
+
+
+jQuery.fn.get_permalink_version = function(opts){
+    $(this).click(function(){
+        opts = $.extend({}, {source : '', target : ''}, opts || {});
+
+        // Hmmm, this is a developer problem, not a user issue
+        if ( $.blank(opts.target) ) return true;
+
+        if ( $.present(opts.source.val()) ) {
+            var url = $(this).attr('href');
+            $.get(url, 'string='+ opts.source.val(), function(resp) {
+                opts.target.val(resp);
+            });
+        } else {
+            $.Growl.show({
+                message : "If you want to autogenerate a permalink, please enter something in the "
+                          + opts.source.siblings('label').val() +" field.",
+                icon    : 'error',
+                timeout : 2500
+            });
+        }
+        return false; 
+    });
+};

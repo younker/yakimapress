@@ -12,14 +12,14 @@
 
     %div#wine_pressC.span-18
       %h1 Wine Press
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+      %p= @wine_press.descr.truncate(300, "...continue on our #{permalink(@wine_press)} page.").html_safe
 
     %div#product_shotsC.span-12
       &nbsp;
 
     %div#cider_pressC.span-18.last
       %h1 Cider Press
-      %p= @cider_press.descr.truncate(300, :seperator => ' ', :omission => "...read more about the #{permalink(@cider_press)}.").html_safe
+      %p= @cider_press.descr.truncate(300, "...continue on our #{permalink(@cider_press)} page.").html_safe
 
   %div.span-48.last
     %div.span-18

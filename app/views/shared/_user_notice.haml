@@ -14,7 +14,7 @@
 - unless msg.empty?
   :javascript
     $.Growl.show({
-      message : $.h("#{msg}"),
+      message : "#{msg}",
       icon    : $.h("#{klass}"),
       timeout : #{timeout}
     });
@@ -25,7 +25,7 @@
     %h2= "#{pluralize(model_obj.errors.count, "error")} prohibited this record from being saved:"
     %ul
       - model_obj.errors.full_messages.each do |msg|
-        %li= msg
+        %li= msg.html_safe
 
   :javascript
     $.Growl.show({

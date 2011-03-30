@@ -16,10 +16,10 @@ module ApplicationHelper
   # Page title inside the body at the top of the main content section
   # Example:
   #   page_title("Administration Functions")
-  def page_title(page_title)
+  def page_title(page_title, klass=nil)
     unless page_title.blank?
       content_for :page_title do
-        content_tag(:h1, page_title, :id => 'page_title')
+        content_tag(:h1, page_title, :id => 'page_title', :class => klass)
       end
     end
   end

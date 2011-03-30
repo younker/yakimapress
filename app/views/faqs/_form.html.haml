@@ -1,0 +1,34 @@
+
+= form_for @faq, :html => {:class => 'faq scaffold'} do |f|
+  = render :partial => 'shared/user_notice', :locals => {:model_obj => @faq}
+
+  .field.quarterh
+    = f.label :question
+    = f.text_area :question
+
+  .field.halfh
+    = f.label :answer
+    = f.text_area :answer
+
+  - if @faq.new_record?
+    .field
+      - auto = link_to 'autogenerate based on question', generate_permalink_path, :class => 'autogen'
+      = f.label :permalink, "Permalink #{auto}".html_safe
+      = f.text_field :permalink
+    
+  - else
+    .field
+      = f.label :permalink
+      %div.disabled_form_field= @faq.permalink
+
+
+  .actions.clearfix
+    = f.submit 'Submit', :class => :button
+
+
+:javascript
+  $('a.autogen').get_permalink_version({
+    source : $('textarea#faq_question'),
+    target : $('input#faq_permalink')
+  })
+

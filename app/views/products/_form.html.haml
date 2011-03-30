@@ -7,9 +7,16 @@
       = f.label :name, 'Name'
       = f.text_field :name
 
-    .field
-      = f.label :permalink, 'Permalink'
-      %div.disabled_form_field= @product.permalink
+    - if @product.new_record?
+      .field
+        - auto = link_to 'autogenerate based on question', generate_permalink_path, :class => 'autogen'
+        = f.label :permalink, "Permalink #{auto}".html_safe
+        = f.text_field :permalink
+    
+    - else
+      .field
+        = f.label :permalink
+        %div.disabled_form_field= @product.permalink
 
     .field
       = f.label :descr, 'Description'
@@ -22,10 +29,6 @@
     .field
       = f.label :price
       = f.text_field :price
-
-    .field
-      = f.label :sale_price
-      = f.text_field :sale_price
 
     .field
       = f.label :shipping_weight, "Shipping Weight (lbs)"
@@ -43,7 +46,15 @@
     .actions.clearfix
       = f.submit 'Save Product Information', :class => :button
 
-%hr
-= render :partial => 'photos/form'
-%hr
-= render :partial => 'photos/destroy'
+- if @photos.present?
+  %hr
+  = render :partial => 'photos/form'
+  %hr
+  = render :partial => 'photos/destroy'
+
+:javascript
+  $('a.autogen').get_permalink_version({
+    source : $('input#product_name'),
+    target : $('input#product_permalink')
+  })
+
