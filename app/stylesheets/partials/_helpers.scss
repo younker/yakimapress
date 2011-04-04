@@ -4,6 +4,8 @@ $dark_green : #201400;
 $white : #ffffff;
 $alert : #410000;
 
+$r : 4px;
+
 @mixin sprite($sprite, $x, $y, $h, $w) {
     background : url(/images/sprites/#{$sprite}.png) no-repeat scroll #{$x}px #{$y}px transparent;
     height : #{$h}px;

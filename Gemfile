@@ -21,9 +21,9 @@ gem 'paperclip' # http://patshaughnessy.net/2010/5/23/how-to-install-paperclip-i
 
 # gem 'hoptoad_notifier'
 
-gem 'younker-string-extensions', :path => '/websites/Gems/younker-string-extensions'
-gem 'contact', :path => '/websites/Engines/contact'
-gem 'ecommerce', :require => 'ecommerce', :path => '/websites/Engines/ecommerce'
+gem 'younker-string-extensions'
+gem 'contact'
+gem 'ecommerce'
 
 group :development, :test do 
   gem 'rspec-rails', '~> 2.5'

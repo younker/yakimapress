@@ -2,7 +2,18 @@ Yakimapress::Application.routes.draw do
 
   devise_for :users
 
-  resources :faqs
+  # resources :faqs, :as =>faqs
+  match '/frequently-asked-questions', :as => :faq_index, :to => 'faqs#index'
+  resources 'f', :as => :faqs, :controller => :faqs
+
+
+  # TODO -- younker [2011-03-30 10:28]
+  # After I migrate all the ecommerce engine stuff in here, use this for seo reasons
+  # match 'wine-and-cider-press', :as => :products, :via => :get, :to => 'products#index'
+  # resources :products, :except => [:index] do
+  #   resources :photos
+  # end
+
 
   match '/about', :to => 'home#about', :as => :about
   match '/american-village-institute', :to => 'home#american_village_institute', :as => :american_village_institute

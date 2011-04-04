@@ -35,14 +35,11 @@ class ProductsController < InheritedResources::Base
   private 
 
   def set_product
-    Rails.logger.info("----------------------------- products_controller.rb:38")
     tmp = params['id'].present? ? params['id'] : params['path']
     @product = Product.find_by_permalink(tmp) || Product.find_by_id(tmp)
-    Rails.logger.info("----------------------------- products_controller.rb:40 - @product = '#{@product.inspect}'")
   end
 
   def set_canonical
-    Rails.logger.info("----------------------------- products_controller.rb:44 - @product_url = '#{@product_url.inspect}'")
     @canonical = product_url(@product.permalink) unless product_path(@product.permalink) == request.path
   end
 

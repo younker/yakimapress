@@ -1,13 +1,14 @@
+@import "partials/helpers";
 @import "compass/css3/border-radius";
 
 #growlcontainer{
-    font-family : arial, helvetica, sans-serif;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 1000;
-  font-size: 1.3em;
-  width: 325px;
+    font-family : $arial;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+    font-size: 1.3em;
+    width: 325px;
 }
 #growlcontainer ol li { list-style : decimal inside none; }
 

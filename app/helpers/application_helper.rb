@@ -1,5 +1,5 @@
 module ApplicationHelper
-  include Ecommerce::ProductsHelper
+  # include Ecommerce::ProductsHelper
 
   # Add some data inside the HTML header; must have corresponding
   # content_for?(:foo) ? yield(:foo) : 'default' inside layout.

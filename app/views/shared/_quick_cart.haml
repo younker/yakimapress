@@ -1,2 +1,12 @@
 
-= link_to 'Cart', cart_path
+%div#quick_cartC
+  %h4= link_to 'Your Cart', cart_path
+  
+  %small
+    - cart = find_cart
+    - if cart.empty?
+      is empty
+    - else
+      = "#{cart.item_count} #{'item'.pluralize_if(cart.item_count != 1)} / #{number_to_currency(cart.total)}"
+    
+    

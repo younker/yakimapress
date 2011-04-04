@@ -18,7 +18,7 @@
         color : #000;
     }
 
-    .flaged {
+    .flagged {
         font-size : .95em;
         $w : 1.6em;
         border: $w solid $green;
@@ -28,7 +28,6 @@
         text-align : right;
         padding : 0 .25em 0 0;
         
-        $r : 4px;
         @include border-top-right-radius($r);
         @include border-bottom-right-radius($r);
 

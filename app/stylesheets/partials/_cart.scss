@@ -1,0 +1,41 @@
+@import "partials/helpers";
+@import "compass/css3/border-radius";
+
+#no_items {
+    font-family : $arial;
+    font-size : 1.4em;
+}
+
+#quick_cartC {
+    font-size : .95em;
+    font-family : $arial;
+    color : #A2966C;
+    position : absolute;
+    top : 5px;
+    right : 0px;
+    text-align : center;
+    z-index : 9;
+    min-width : 150px;
+
+    background : $bg-cream;
+    @include border-bottom-left-radius(10px);
+
+    h4 {
+        border-top : 1px solid #C6BC9B;
+        border-bottom : 1px solid #C6BC9B;
+        background-color : #e2dcc7;
+        padding : 3px 10px;
+        margin : 0;
+    }
+
+    a       { text-decoration : none; color : #a2966c; }
+    a:hover { color : $dark_green; }
+
+    small {
+        padding : 4px 10px;
+        display : block;
+        white-space : nobreak;
+    }
+
+}
+
