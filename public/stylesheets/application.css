@@ -1,4 +1,4 @@
-@charset "US-ASCII";
+@charset "UTF-8";
 h2 { font-size: 2.2em; color: #201400; margin-bottom: 0px; }
 
 hr { margin: 1.5em 0; }
@@ -170,7 +170,7 @@ div.blockMsg, p#modal_contentC { -moz-border-radius: 7px; -webkit-border-radius:
 #atcC { /* contact engine */ }
 #atcC form { position: relative; }
 #atcC input#quantity { width: 22px !important; }
-#atcC input[type="submit"] { width: 300px; margin: 0 0 0 45px; font-size: 1.6em; padding: .5em .25em; }
+#atcC input[type="submit"] { width: 300px; margin: 0 0 0 45px; font-size: 1.6em; padding: .5em .25em; min-height: 2.4em; }
 #atcC #quantityC { font-family: arial, helvetica, sans-serif; position: absolute; left: 360px; top: 4px; }
 #atcC #quantityC label[for="quantity"] { position: absolute; top: -5px; left: 0px; }
 #atcC #quantityC input#quantity { position: absolute; top: 13px; left: 8px; margin: 0px; text-align: center; }

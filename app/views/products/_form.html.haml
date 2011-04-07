@@ -46,11 +46,10 @@
     .actions.clearfix
       = f.submit 'Save Product Information', :class => :button
 
-- if @photos.present?
-  %hr
-  = render :partial => 'photos/form'
-  %hr
-  = render :partial => 'photos/destroy'
+%hr
+= render :partial => 'photos/form'
+%hr
+= render :partial => 'photos/destroy'
 
 :javascript
   $('a.autogen').get_permalink_version({

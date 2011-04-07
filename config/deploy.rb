@@ -6,9 +6,9 @@ ssh_options[:forward_agent] = true
 # cap deploy:check
 # 
 
-set :application, "yakimapress"
+set :application, "rails"
 set :webfaction_username, "yakimapress"
-set :webfaction_port, "80"
+set :webfaction_port, "29299"
 
 set :webfaction_db_type, "mysql"
 set :webfaction_db, "yakimapress_stag"
@@ -45,17 +45,17 @@ namespace :deploy do
 
   desc "Redefine deploy:start"
   task :start, :roles => :app do
-    run "/home/#{CAP_CONFIG['webfaction']['username']}/webapps/#{CAP_CONFIG['app_name']}/bin/start"
+    run "/home/#{webfaction_username}/webapps/#{application}/bin/start"
   end
  
   desc "Redefine deploy:stop"
   task :stop, :roles => :app do
-    run "/home/#{CAP_CONFIG['webfaction']['username']}/webapps/#{CAP_CONFIG['app_name']}/bin/stop"
+    run "/home/#{webfaction_username}/webapps/#{application}/bin/stop"
   end
 
   desc "Redefine deploy:restart"
   task :restart, :roles => :app do
-    run "/home/#{CAP_CONFIG['webfaction']['username']}/webapps/#{CAP_CONFIG['app_name']}/bin/restart"
+    run "/home/#{webfaction_username}/webapps/#{application}/bin/restart"
   end
 
   ##

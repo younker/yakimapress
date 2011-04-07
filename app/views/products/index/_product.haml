@@ -1,7 +1,8 @@
 %div.productC.spv
   %div.product_imageC
-    - img = image_tag product.photos.first.photo.url(:large), :alt => "#{product.name} | YakimaPress.com"
-    = permalink(product, img)
+    - if product.photos.first.present?
+      - img = image_tag product.photos.first.photo.url(:large), :alt => "#{product.name} | YakimaPress.com"
+      = permalink(product, img)
     
   %h2= "Our Featured #{permalink(product, press_name(product), {:downcase => false})}".html_safe
   %div.price= product.pricef
