@@ -1,38 +1,40 @@
+:ruby
+  page_title('Vintage cider and wine presses')
 
 %div#productsC.container
   %div.span-48.last
-    %div.prepend-6.span-36.span-6.last
-      %p The Yakima Press Company manufactures vintage cider and wine presses from traditional designs that have stood the test of time. We offer only the highest quality products that are completely built in the USA. Our cider and wine presses are not only highly efficient in use, but are also beautiful in design, and built to last for generations. 
-
-      %p Our goal is to build heirloom cider and wine presses that will be passed onto future generations. 
-
-      %p We build fruit presses that range in many different shapes and sizes, so we are sure to meet the needs of any family or individual. Our largest cider press, the American Harvester Cider Mill, can produce up to 80 gallons of fresh cider per day, and our smallest wine press, the Cottager, is just the right size for the beginning winemaker. 
-
-      %p Our hope is that our cider and wine presses will inspire new traditions. We want families to enjoy pressing fresh cider each harvest season. We want budding winemakers to enjoy the first taste of their own wine. We want cider enthusiasts to enjoy their first batch of hard cider. We want everyone to enjoy beverages that were made with their own hands using apples, grapes, and other fresh fruits.
-
     %div#wine_pressC.span-18
       %h1 Wine Press
-      %p= @wine_press.descr.truncate(300, "...continue on our #{permalink(@wine_press)} page.").html_safe
+      %div.descrC
+        = @wine_press.descr.truncate(300, "...continue on our #{permalink(@wine_press)} page.").html_safe
 
-    %div#product_shotsC.span-12
-      &nbsp;
+      %div.flagged
+        %span= "View the #{permalink(@wine_press)}".html_safe
+      %div#wineIS.imageshowC
+        - images_for_slideshow('wine').each do |image_path|
+          = image_tag image_path
+
+
+    %div.span-12
+      = image_tag "home/yakima-press-company.png", :id => 'main_product_image', :alt => 'Yakima Press Company'
+
 
     %div#cider_pressC.span-18.last
       %h1 Cider Press
-      %p= @cider_press.descr.truncate(300, "...continue on our #{permalink(@cider_press)} page.").html_safe
+      %div.descrC
+        = @cider_press.descr.truncate(300, "...continue on our #{permalink(@cider_press)} page.").html_safe
 
-  %div.span-48.last
-    %div.span-18
       %div.flagged
-        %span= "Learn more about this #{permalink(@wine_press)}.".html_safe
+        %span= "View the #{permalink(@cider_press)}".html_safe
 
-    %div.span-12
-      &nbsp;
-
-    %div.span-18.last
-      %div.flagged
-        %span= "Learn more about the #{permalink(@cider_press)}.".html_safe
+      %div#ciderIS.imageshowC
+        - images_for_slideshow(@cider_press.press_type).each do |image_path|
+          = image_tag image_path
 
 
 
-    
+:javascript
+  $(document).ready(function() {
+    new Imageshow($('#wineIS'));
+    new Imageshow($('#ciderIS'), {wait : 2500});
+  })

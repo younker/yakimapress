@@ -40,7 +40,7 @@ GEM
       net-ssh-gateway (>= 1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
-    contact (0.0.8)
+    contact (0.0.9)
       rails
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
@@ -131,7 +131,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   compass
-  contact (>= 0.0.7)
+  contact (>= 0.0.9)
   devise
   ecommerce (>= 0.0.2)
   encrypted_strings

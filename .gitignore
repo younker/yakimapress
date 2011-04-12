@@ -9,3 +9,4 @@ scratch
 howto
 certs
 config/database.yml
+config/contact.yml

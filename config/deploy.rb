@@ -66,17 +66,18 @@ namespace :deploy do
 
     # run "ln -nfs #{release_path}/public /home/#{webfaction_username}/webapps/#{application}/"
 
+    # release_path = /home/yakimapress/webapps-releases/rails/releases/20110407164415
+    # deploy_to    = /home/yakimapress/webapps-releases/rails
 
-    # FIXME -- younker [2010-09-27 18:06]
-    # I have no F'ing idea why it stopped updating the "current" symlink from what we just retrieved from svn, but
-    # I don't have time to figure it out now....and I don't really care as long as it works!
-    # ln -nfs /home/younker/webapps-releases/psy/releases/20100928005034 /home/younker/webapps-releases/psy/current
     run "ln -nfs #{release_path} #{deploy_to}/current"
 
     # ln -nfs /home/younker/webapps-releases/psy/shared/config/database.yml /home/younker/webapps-releases/psy/releases/20100927224516/config/database.yml
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 
+
+
     # ln -nfs /home/younker/webapps-releases/psy/shared/config/keys.yml /home/younker/webapps-releases/psy/releases/20100927224516/config/keys.yml
+    run "ln -nfs #{shared_path}/config/contact.yml #{release_path}/config/contact.yml"
     run "ln -nfs #{shared_path}/config/ecommerce.yml #{release_path}/config/ecommerce.yml"
 
     # ln -nfs /home/younker/webapps-releases/psy/shared/assets /home/younker/webapps-releases/psy/releases/20100927224516/public/
@@ -85,13 +86,13 @@ namespace :deploy do
     # ln -nfs /home/younker/webapps-releases/psy/shared/certs /home/younker/webapps-releases/psy/releases/20100927224516/
     run "ln -nfs #{shared_path}/certs #{release_path}"
   end
-  after "deploy:update_code", "deploy:symlink"
+  # after "deploy:update_code", "deploy:symlink"
 
 
   desc "bundle install the necessary prerequisites"
   task :bundle_install, :roles => :app do
-    run "export GEM_HOME=/home/yakimapress/webapps/rails/gems"
-    run "cd #{deploy_to}/current && bundle install"
+    # run "export GEM_HOME=/home/yakimapress/webapps/rails/gems"
+    run "cd #{deploy_to}/current/ && /home/yakimapress/webapps/rails/bin/bundle install"
   end
   # after "deploy:update_code", "deploy:bundle_install"
 

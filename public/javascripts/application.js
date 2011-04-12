@@ -71,3 +71,34 @@ jQuery.fn.get_permalink_version = function(opts){
         return false; 
     });
 };
+
+var Imageshow = function(container, args) { return this.init(container,args); }
+jQuery.extend(Imageshow.prototype, {
+    imageshow_defaults : {
+        delay : 5000, // how long before they switch images?
+        speed : 1000, // the speed at which it will transition/fade
+        wait  : 0     // how long should we wait to queue up the first item?
+    },
+
+    init : function(container, args) {
+        this.container = $(container);
+        this.settings = $.extend({}, this.imageshow_defaults, args);
+        var self = this;
+        setTimeout(function(){self.queue_next_change();}, this.settings.wait);
+        return this;
+    },
+
+    queue_next_change : function() {
+        var self = this;
+        setTimeout(function(){
+            self.viewable_slide().fadeOut(self.settings.speed, function() {
+                self.container.prepend($(this).remove().css('display',''));
+                self.queue_next_change();
+            });
+        }, self.settings.delay);
+    },
+
+    viewable_slide : function(){
+        return this.container.children(':last');
+    }
+});
