@@ -1,4 +1,9 @@
 Yakimapress::Application.routes.draw do
+  # Redir all non-www to www
+  constraints(:host => /^yakimapress.com$/) do
+    root :to => redirect("http://www.yakimapress.com")
+    match '/*path', :to => redirect {|params| "http://www.yakimapress.com/#{params[:path]}"}
+  end
 
   devise_for :users
 
