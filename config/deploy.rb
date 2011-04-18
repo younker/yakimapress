@@ -4,9 +4,8 @@ ssh_options[:forward_agent] = true
 # Setup (taken mostly from http://forum.webfaction.com/viewtopic.php?id=4906)
 # cap deploy:setup
 # cap deploy:check
-# 
 
-set :application, "rails"
+set :application, "yakimapress"
 set :webfaction_username, "yakimapress"
 set :webfaction_port, "29299"
 
@@ -66,7 +65,7 @@ namespace :deploy do
 
     # run "ln -nfs #{release_path}/public /home/#{webfaction_username}/webapps/#{application}/"
 
-    # release_path = /home/yakimapress/webapps-releases/rails/releases/20110407164415
+    # release_path = /home/yakimapress/webapps-releases/yakimapress/releases/20110407164415
     # deploy_to    = /home/yakimapress/webapps-releases/rails
 
     run "ln -nfs #{release_path} #{deploy_to}/current"
@@ -91,8 +90,8 @@ namespace :deploy do
 
   desc "bundle install the necessary prerequisites"
   task :bundle_install, :roles => :app do
-    # run "export GEM_HOME=/home/yakimapress/webapps/rails/gems"
-    run "cd #{deploy_to}/current/ && /home/yakimapress/webapps/rails/bin/bundle install"
+    # run "export GEM_HOME=/home/yakimapress/webapps/yakimapress/gems"
+    run "cd #{deploy_to}/current/ && /home/yakimapress/webapps/#{application}/bin/bundle install"
   end
   # after "deploy:update_code", "deploy:bundle_install"
 
