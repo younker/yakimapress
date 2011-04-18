@@ -23,7 +23,7 @@ gem 'paperclip' # http://patshaughnessy.net/2010/5/23/how-to-install-paperclip-i
 
 gem 'younker-string-extensions'
 gem 'contact', ">= 0.0.9"
-gem 'ecommerce', ">= 0.0.2"
+gem 'ecommerce'
 
 group :development, :test do 
   gem 'rspec-rails', '~> 2.5'

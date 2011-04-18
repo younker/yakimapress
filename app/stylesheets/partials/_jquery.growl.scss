@@ -4,13 +4,17 @@
 #growlcontainer{
     font-family : $arial;
     position: fixed;
-    left: 20px;
+    left: 10px;
     top: 20px;
     z-index: 1000;
     font-size: 1.3em;
-    width: 325px;
+    width: 340px;
+
+    ol li { list-style : decimal inside none; }
+    
+    a { color : #ffffff; }
 }
-#growlcontainer ol li { list-style : decimal inside none; }
+
 
 .growlstatus{
   position: relative;

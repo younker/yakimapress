@@ -119,9 +119,9 @@ div.blockMsg p#modal_contentC { margin: 10px; padding: 40px; background: #ffffff
 
 div.blockMsg, p#modal_contentC { -moz-border-radius: 7px; -webkit-border-radius: 7px; -o-border-radius: 7px; -ms-border-radius: 7px; -khtml-border-radius: 7px; border-radius: 7px; }
 
-#growlcontainer { font-family: arial, helvetica, sans-serif; position: fixed; left: 20px; top: 20px; z-index: 1000; font-size: 1.3em; width: 325px; }
-
+#growlcontainer { font-family: arial, helvetica, sans-serif; position: fixed; left: 10px; top: 20px; z-index: 1000; font-size: 1.3em; width: 340px; }
 #growlcontainer ol li { list-style: decimal inside none; }
+#growlcontainer a { color: #ffffff; }
 
 .growlstatus { position: relative; background: url(/images/opacity_60.png) repeat scroll 0px 0px transparent; border: 3px #000 solid; padding: 10px; color: #fff; margin-bottom: 5px; -moz-border-radius: 10px; -webkit-border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; }
 
