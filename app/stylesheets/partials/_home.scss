@@ -20,6 +20,7 @@
     }
 
     img#main_product_image {
+        border : solid 1px $green;
         margin-left : 15px;
     }
 
@@ -28,12 +29,13 @@
     .imageshowC {
         position : relative;
         top : -60px;
-        left : 270px;
-        width : 80px;
-        height : 80px;
+        left : 268px;
+        width : 82px;
+        height : 82px;
         overflow : hidden;
         
         img {
+            border : solid 1px $green;
             position : absolute;
             top : 0;
             left : 0;
