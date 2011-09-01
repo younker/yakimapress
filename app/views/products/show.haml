@@ -1,5 +1,8 @@
 :ruby
   page_title('Our products are built to last while creating memories along the way.')
+  header(:title, @product.name)
+  header(:keywords, @product.meta_keywords)
+  header(:description, @product.meta_description)
 
 %div#productC.clearfix.container
   %div.span-24

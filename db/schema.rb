@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416073602) do
+ActiveRecord::Schema.define(:version => 20110416192941) do
 
   create_table "cart_items", :force => true do |t|
     t.integer "cart_id"
@@ -42,15 +42,6 @@ ActiveRecord::Schema.define(:version => 20110416073602) do
     t.datetime "updated_at"
   end
 
-  create_table "payment_notifications", :force => true do |t|
-    t.text     "params"
-    t.integer  "cart_id"
-    t.string   "status"
-    t.string   "transaction_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "photos", :force => true do |t|
     t.integer  "product_id"
     t.string   "photo_file_name"
@@ -70,10 +61,10 @@ ActiveRecord::Schema.define(:version => 20110416073602) do
     t.text     "meta_description"
     t.text     "meta_keywords"
     t.string   "tags"
+    t.integer  "shipping_weight"
+    t.string   "press_type",                                                      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "shipping_weight"
-    t.string   "press_type"
   end
 
   create_table "users", :force => true do |t|
