@@ -6,7 +6,7 @@ class ProductsController < InheritedResources::Base
 
 
   def index
-    @wine_press = Product.find_by_permalink('wine-press')
+    @wine_press = Product.find_by_permalink('villager-wine-press')
     @cider_press = Product.find_by_permalink('american-harvester-cider-mill-apple-press')
   end
 
@@ -22,7 +22,8 @@ class ProductsController < InheritedResources::Base
     end
   end
       
-  # Route catch-all for pages like /wine-press
+  # Route catch-all for pages like /villager-wine-press
+
   def by_permalink
     if @product.present?
       render :template => 'products/show'

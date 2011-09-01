@@ -1,5 +1,5 @@
 class LoadProducts < ActiveRecord::Migration
-  @wine_permalink = 'wine-press'
+  @wine_permalink = 'villager-wine-press'
   @cider_permalink = 'american-harvester-cider-mill-apple-press'
 
   def self.up
