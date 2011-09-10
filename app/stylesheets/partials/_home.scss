@@ -56,7 +56,11 @@
         @include border-top-right-radius($r);
         @include border-bottom-right-radius($r);
 
-        a { color : $white; text-decoration : underline; }
+        a {
+					font-size : .9em;
+					color : $white;
+					text-decoration : underline;
+				}
         a:hover { text-decoration : none; }
 
         span {

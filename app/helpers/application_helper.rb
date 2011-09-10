@@ -40,14 +40,14 @@ module ApplicationHelper
   end
 
   def cap(words)
-    s = words.collect do |word|
+    s = Array(words).collect do |word|
       if word.frozen?
         "#{word} "
       else
         "<span class='cap'>#{word.first}</span><span class='lc'>#{word[1..-1]}</span> "
       end
     end
-    s.to_s.html_safe
+    s.join(' ').to_s.html_safe
   end
 
 end

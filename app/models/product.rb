@@ -14,6 +14,10 @@ class Product < ActiveRecord::Base
     errors.add(:press_type, ': invalid value given') unless valid_press_type?
   end
 
+  def name
+    read_attribute(:name).html_safe
+  end
+
   def valid_press_type?
     VALID_PRESS_TYPES.include?(self.press_type)
   end
