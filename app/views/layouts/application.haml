@@ -31,57 +31,59 @@
     :javascript
       var AUTH_TOKEN = encodeURIComponent(#{form_authenticity_token.inspect});
 
-%body
-  %div#root
-    = render :partial => 'shared/quick_cart'
+    - if Rails.env.eql?('production')
+      :javascript
+        $(document).ready(function() {
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-22831082-1']);
+          _gaq.push(['_trackPageview']);
 
-    %div#header_bg &nbsp;
-    %div#header_delimeter_fade &nbsp;
-    %div#header_delimeter &nbsp;
-    %div#menu_bar
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        });
 
-    %div.container
-      %div#header.span-48.last
-        %div#header_fruit &nbsp;
-        %div#banner_logo &nbsp;
 
-        = render :partial => 'layouts/application/menu'
+  %body
+    %div#root
+      = render :partial => 'shared/quick_cart'
+
+      %div#header_bg &nbsp;
+      %div#header_delimeter_fade &nbsp;
+      %div#header_delimeter &nbsp;
+      %div#menu_bar
+
+      %div.container
+        %div#header.span-48.last
+          %div#header_fruit &nbsp;
+          %div#banner_logo &nbsp;
+
+          = render :partial => 'layouts/application/menu'
     
-      %div#main_container.span-48.last
-        %div#swirly_twirlyC
-          %div#swirly_twirlyL &nbsp;
-          %div#swirly_twirlyR &nbsp;
+        %div#main_container.span-48.last
+          %div#swirly_twirlyC
+            %div#swirly_twirlyL &nbsp;
+            %div#swirly_twirlyR &nbsp;
 
-        - if content_for?(:page_title)
-          %div.prepend-6.span-36.append-6.last= yield(:page_title)
+          - if content_for?(:page_title)
+            %div.prepend-6.span-36.append-6.last= yield(:page_title)
 
-        - flash.each do |key, msg|
-          = render :partial => 'shared/user_notice', :locals => {:klass => key, :msg => msg}
+          - flash.each do |key, msg|
+            = render :partial => 'shared/user_notice', :locals => {:klass => key, :msg => msg}
 
-        = yield
+          = yield
         
-  %div#footer
-    %div#footer_delimeter_fade &nbsp;
-    %div.container
-      %div.span-48.last
-        %div.span-14= render :partial => 'layouts/application/legal_stuff'
-        %div.span-20 &nbsp;
-        %div.span-14.last= render :partial => 'layouts/application/social_links'
+    %div#footer
+      %div#footer_delimeter_fade &nbsp;
+      %div.container
+        %div.span-48.last
+          %div.span-14= render :partial => 'layouts/application/legal_stuff'
+          %div.span-20 &nbsp;
+          %div.span-14.last= render :partial => 'layouts/application/social_links'
 
-        -# render :partial => 'signin'
+          -# render :partial => 'signin'
 
-  - if Rails.env.eql?('production')
-    :javascript
-      $(document).ready(function() {
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-22831082-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      });
 
   
