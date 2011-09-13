@@ -2,7 +2,12 @@ module ProductsHelper
 
   def permalink(product, target=nil, args={:downcase => true})
     target ||= product.name
-    target.downcase if args[:downcase].present? && args[:downcase]
+
+    if args[:downcase].present?
+      target.downcase if args[:downcase]
+      args.delete(:downcase)
+    end
+    
     link_to target, "/p/"+product.permalink, args
   end
 

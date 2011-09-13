@@ -14,7 +14,7 @@
     - if content_for?(:description)
       %meta{'name' => 'description', :content => yield(:description) }/
 
-    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}/
+    %meta{:charset => 'UTF-8'}
 
     - if @canonical.present?
       %link{:rel => :canonical,  :href => "#{@canonical}"}
