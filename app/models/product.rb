@@ -8,6 +8,8 @@ class Product < ActiveRecord::Base
 
   VALID_PRESS_TYPES = %w[wine cider]
 
+  attr_accessible :name, :permalink, :descr, :price, :sale_price, :meta_description, :meta_keywords, :meta_title, :tags, :shipping_weight, :press_type
+
   validates_presence_of :name, :permalink, :press_type
 
   validate :press_type do
