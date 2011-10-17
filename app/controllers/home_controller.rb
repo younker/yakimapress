@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def home
     @wine_press = Product.find_by_permalink('villager-wine-press')
-    @cider_press = Product.find_by_permalink('american-harvester-cider-mill-apple-press')
+    @cider_press = Product.find_by_permalink('colonial-cider-mill-apple-press')
   end
 
   def about

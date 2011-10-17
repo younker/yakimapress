@@ -7,7 +7,7 @@ class ProductsController < InheritedResources::Base
 
   def index
     @wine_press = Product.find_by_permalink('villager-wine-press')
-    @cider_press = Product.find_by_permalink('american-harvester-cider-mill-apple-press')
+    @cider_press = Product.find_by_permalink('colonial-cider-mill-apple-press')
   end
 
   def search
@@ -38,6 +38,7 @@ class ProductsController < InheritedResources::Base
   def set_product
     tmp = params['id'].present? ? params['id'] : params['path']
     @product = Product.find_by_permalink(tmp) || Product.find_by_id(tmp)
+    redirect_to(products_path, :status => 301) unless @product.present?
   end
 
   def set_canonical

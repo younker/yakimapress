@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RedirectMatch 301 ^/p/american-harvester-cider-mill-apple-press /p/colonial-cider-mill-apple-press
+</IfModule>
