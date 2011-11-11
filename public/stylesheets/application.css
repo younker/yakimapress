@@ -42,12 +42,12 @@ hr {
   src: local("☺"), url('/fonts/hoefler_text-webfont.svg') format('svg'), url('/fonts/hoefler_text-webfont.woff') format('woff'), url('/fonts/hoefler_text-webfont.ttf') format('truetype');
 }
 
-/* line 10, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 10, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
 }
 
-/* line 12, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 12, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #root {
   clear: both;
   min-height: 100%;
@@ -55,12 +55,12 @@ html, body {
   height: 100%;
   margin-bottom: -80px;
 }
-/* line 18, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 18, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #root #root_footer {
   height: 80px;
 }
 
-/* line 20, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 20, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #footer {
   clear: both;
   position: relative;
@@ -169,7 +169,7 @@ div#footer div.delimeter {
   margin: 0 5px 0 0;
   padding: 0 0 0 5px;
 }
-/* line 7, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+/* line 7, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 div#footer div.delimeter {
   *display: inline;
 }
@@ -307,7 +307,7 @@ ul#menuC li div.descr {
   vertical-align: middle;
   *vertical-align: auto;
 }
-/* line 7, ../../../../Users/ynkr/.rvm/gems/ruby-1.9.2-p180@rails31beta/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+/* line 7, ../../../../Users/younker/.rvm/gems/ruby-1.9.2-p290@yakimapress/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 ul#menuC li div.descr {
   *display: inline;
 }
