@@ -1,6 +1,7 @@
 :ruby
   page_title(@faq.question, 'faq_page')
   header(:title, @faq.permalink.titleize)
+  header(:description, "(Question) #{@faq.question} (Answer) #{@faq.answer}")
 
 
 %div#faqC.clearfix.container
