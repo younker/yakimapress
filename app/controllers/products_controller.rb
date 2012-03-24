@@ -1,4 +1,5 @@
 class ProductsController < InheritedResources::Base
+  before_filter :redirect_if_verbose_path, :only => [:show]
   before_filter :redirect_unless_admin, :except => [:index, :search, :by_permalink]
 
   before_filter :set_product, :except => [:index, :new, :create, :search]
@@ -34,6 +35,13 @@ class ProductsController < InheritedResources::Base
 
 
   private 
+
+  def redirect_if_verbose_path
+    if request.env['PATH_INFO'].match(/^\/products\/\w.*$/)
+      terse_path = request.env['PATH_INFO'].gsub(/\/products\//,'/p/')
+      redirect_to(terse_path, :status => 301)
+    end
+  end
 
   def set_product
     tmp = params['id'].present? ? params['id'] : params['path']
