@@ -1,5 +1,7 @@
 :ruby
   page_title(@faq.question, 'faq_page')
+  header(:title, @faq.permalink.titleize)
+
 
 %div#faqC.clearfix.container
   %div.span-8 &nbsp;
