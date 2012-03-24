@@ -25,13 +25,6 @@ class ApplicationController < ActionController::Base
     @active_section = nil
     render :template => 'shared/exceptions/404.haml', :status => '404'
   end
-  
-  def redirect_unless_admin
-    unless user_signed_in? && current_user.admin?
-      flash[:error] = 'You are not permitted to view that page.'
-      redirect_to (request.env["HTTP_REFERER"].present? ? request.env["HTTP_REFERER"] : root_path)
-    end
-  end
 
   def encrypt(*args)
     YAML::dump(args).encrypt(:symmetric, :password => KEYS['encryption']['password'])
